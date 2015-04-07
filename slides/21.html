@@ -1,8 +1,20 @@
-<div data-title="what's new?">
-  <p>
-    Thanks!
-  </p>
-  <p>
-  @jameskyburz
-  </p>
+<div data-title="The concepts">
+  <ul>
+    <li>
+    <pre>
+var h = require('virtual-dom/h');
+var diff = require('virtual-dom/diff');
+var patch = require('virtual-dom/patch');
+var createElement = require('virtual-dom/create-element');
+    </pre>
+    </li>
+    <li>
+    <pre>
+var newTree = render(count);
+var patches = diff(tree, newTree);
+rootNode = patch(rootNode, patches);
+tree = newTree;
+    </pre>
+    </li>
+  </ul>
 </div>
