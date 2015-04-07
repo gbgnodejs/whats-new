@@ -11,19 +11,16 @@
   },
   "version": "0.0.0",
   "scripts": {
-    "pack": "rm -rf whats-new.app && npm install && packify index.html > launch.html && node add_slides",
-    "build": "npm run pack && atom-shell-packager . whats-new --ignore=node_modules --ignore=node_modules/atom-shell",
-    "app": "npm run pack && open launch.html",
-    "postbuild": "rm launch.html"
+    "prebuild": "rm -rf whats-new.app",
+    "build": "npm install && node create_slides && atom-shell-packager . whats-new --ignore=node_modules --ignore=node_modules/atom-shell",
+    "postbuild": "rm slides.json"
   },
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
     "atom-shell": "^0.22.3",
-    "browserify": "^4.1.11",
     "domify": "^1.2.2",
-    "glob": "^5.0.3",
-    "packify": "^1.1.2"
+    "glob": "^5.0.3"
   },
   "devDependencies": {
     "atom-shell-packager": "^2.1.1"

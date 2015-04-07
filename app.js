@@ -1,7 +1,7 @@
 var domify = require('domify');
 var storageKey = 'dotnetmentor.slide';
 var styleKey = storageKey + '.style';
-load(null, '#{insert-slides-here}');
+load(null, require('./slides'));
 
 function load(err, slides) {
   if (err) return alert(err);

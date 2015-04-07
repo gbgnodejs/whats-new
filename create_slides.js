@@ -10,8 +10,5 @@ glob('./slides/*.html', function(er, files) {
   files.forEach(function(file) {
     slides.push(fs.readFileSync(file, 'utf-8').toString());
   });
-  var launchPath = __dirname + '/launch.html';
-  var html = fs.readFileSync(launchPath, 'utf8');
-  html = html.replace("'#{insert-slides-here}'", JSON.stringify(slides));
-  fs.writeFileSync(launchPath, html);
+  fs.writeFileSync('./slides.json', JSON.stringify(slides));
 });
