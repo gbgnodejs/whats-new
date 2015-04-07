@@ -12,8 +12,7 @@
   "version": "0.0.0",
   "scripts": {
     "prebuild": "rm -rf whats-new.app",
-    "build": "npm install && node create_slides && atom-shell-packager . whats-new --ignore=node_modules --ignore=node_modules/atom-shell",
-    "postbuild": "rm slides.json"
+    "build": "npm install && atom-shell-packager . whats-new --ignore=node_modules --ignore=node_modules/atom-shell"
   },
   "main": "index.js",
   "license": "MIT",
